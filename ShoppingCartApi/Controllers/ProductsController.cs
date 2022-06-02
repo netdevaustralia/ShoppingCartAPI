@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace ShoppingCartApi.Controllers
 {
-    public class ProductController : ApiControllerBase
+    public class ProductsController : ApiControllerBase
     {
         [HttpGet]
-        public async Task<ActionResult<ProductsVm>> GetProducts()
+        public async Task<ActionResult<ProductsVm>> Get()
         {
             return await Mediator.Send(new GetProductsQuery());
         }
